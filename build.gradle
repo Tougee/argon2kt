@@ -12,7 +12,6 @@ buildscript {
 
         // for maven central upload and publishing
         gradle_maven_publish_plugin_version = '0.14.2'
-        dokka_gradle_plugin_version = '1.4.30'
     }
 
     repositories {
@@ -26,7 +25,6 @@ buildscript {
 
         // for maven central upload and publishing
         classpath "com.vanniktech:gradle-maven-publish-plugin:$gradle_maven_publish_plugin_version"
-        classpath "org.jetbrains.dokka:dokka-gradle-plugin:$dokka_gradle_plugin_version"
     }
 }
 
@@ -40,7 +38,7 @@ allprojects {
         minSdkVersion = 15
         compileSdkVersion = 33
         targetSdkVersion = 33
-        ndkVersion = "22.1.7171670"
+        ndkVersion = "25.2.9519653"
     }
 }
 
