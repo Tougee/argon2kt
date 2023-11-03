@@ -61,3 +61,16 @@ dependencies {
     androidTestImplementation "androidx.test.espresso:espresso-core:$espresso_version"
     androidTestImplementation "org.assertj:assertj-core:$jassert_version"
 }
+
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                from components.release
+                groupId = 'com.github.tougee'
+                artifactId = 'argon2kt'
+                version = '0.0.1'
+            }
+        }
+    }
+}
