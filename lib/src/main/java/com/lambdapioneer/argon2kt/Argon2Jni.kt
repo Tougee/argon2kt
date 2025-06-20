@@ -12,7 +12,11 @@ import java.nio.ByteBuffer
 internal class Argon2Jni(soLoader: SoLoaderShim) {
 
     init {
-        soLoader.loadLibrary("argon2jni")
+        try {
+            soLoader.loadLibrary("argon2jni")
+        } catch (ignore: Throwable) {
+            // ignore load so throwable, it can be loaded in other places outside this lib
+        }
     }
 
     fun argon2Hash(

@@ -2,7 +2,7 @@
 minSdk = "21"
 targetSdk = "35"
 compileSdk = "35"
-ndk = "27.2.12479018"
+ndk = "27.0.12077973"
 
 agp = "8.8.1"
 kotlin = "2.0.21"
